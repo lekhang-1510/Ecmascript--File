@@ -50,3 +50,40 @@ while (q <= 100) {
   q++;
 }
 console.log(sum);
+
+//BÀI TẬP 6 (easy)
+console.log("In ra bảng cửu chương ");
+//khai báo n
+let n = 1;
+while (n <= 9) {
+  console.log(`\n`);
+  console.log(`Bảng cửu chương ${n}`);
+  //khai báo m
+  let m = 1; // lỗi đã sai: khai báo m trong vòng lặp nhỏ
+  while (m <= 10) {
+    console.log(`${n} x ${m} = ${n * m}`);
+    //tăng m (vòng lặp nhỏ)
+    m++;
+  }
+  // tăng n (vòng lặp lớn)
+  n++;
+}
+
+//BÀI TẬP 7 (difficult) - biến w
+console.log(`Vẽ tam giác sao:
+  *
+  **
+  ***
+  ****
+  *****`);
+// tạo biến rỗng chưa hình
+let star = "";
+let w = 1;
+while (w <= 5) {
+  // mỗi lần lặp + "*"
+  star += "*";
+  // in ra star
+  console.log(star);
+  // biến đếm tăng 1
+  w++;
+}
