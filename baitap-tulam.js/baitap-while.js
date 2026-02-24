@@ -87,3 +87,5 @@ while (w <= 5) {
   // biến đếm tăng 1
   w++;
 }
+
+//BÀI TẬP 8
