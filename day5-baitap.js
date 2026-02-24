@@ -13,14 +13,18 @@
 // console.log("Đã hết giờ ");
 
 //BÀI TẬP 2:
-let price = Math.ceil(Math.random() * 5000000);
-if (price < 100) {
-  price = 100;
-}
+//let price = Math.ceil(Math.random() * 5000000);
+//if (price < 100) {
+//  price = 100;
+
 let numOfOder = 5;
 let total = 0;
 for (i = 1; i <= numOfOder; i++) {
-  price;
+  let price = Math.ceil(Math.random() * 5000000);
+  if (price < 100) {
+    price = 100;
+  }
   total += price;
+  console.log(price);
 }
 console.log(total);
