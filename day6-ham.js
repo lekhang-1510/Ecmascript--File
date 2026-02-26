@@ -48,6 +48,8 @@ hello();
  * 2. Hàm này sẽ nhận vào tham số : canhGocVuong1, canhGocVuong2
  * 3.Tính cạnh huyền và trả về kết quả
  */
+// Math.pow(a,b) = a mũ b
+// Math.sqrt(a) = căn bậc 2 của a
 function calculatePytago(canhGocVuong1, canhGocVuong2) {
   let canhHuyen = Math.sqrt(
     Math.pow(canhGocVuong1, 2) + Math.pow(canhGocVuong2, 2),
@@ -55,3 +57,30 @@ function calculatePytago(canhGocVuong1, canhGocVuong2) {
   return canhHuyen;
 }
 console.log(`Cạnh huyền = ${calculatePytago(3, 4)}`);
+
+/**
+ * 1. Tạo 1 hàm tên calculator
+ * 2. Hàm này sẽ nhận vào 3 tham số: number1,number2, operator ---> "+", "-", "*", "/"
+ * 3. Trong hàm , kiểm tra phép toán đó là gì, thực hiện phép toán tương tự
+ * 4. Trả về kết quả
+ * Lưu ý: Viết bằng Arrow Function
+ */
+let calculator = (number1, number2, operator) => {
+  switch (operator) {
+    case "+":
+      console.log(`${number1} + ${number2} = ${number1 + number2}`);
+      break;
+    case "-":
+      console.log(`${number1} - ${number2} = ${number1 - number2}`);
+      break;
+    case "*":
+      console.log(`${number1} x ${number2} = ${number1 * number2}`);
+      break;
+    case "/":
+      console.log(`${number1} : ${number2} = ${number1 / number2}`);
+      break;
+    default:
+      console.log("Phép tính không hợp lệ ");
+  }
+};
+calculator(2, 4, "+");
