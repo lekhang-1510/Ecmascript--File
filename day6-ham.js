@@ -65,22 +65,25 @@ console.log(`Cạnh huyền = ${calculatePytago(3, 4)}`);
  * 4. Trả về kết quả
  * Lưu ý: Viết bằng Arrow Function
  */
-let calculator = (number1, number2, operator) => {
+const calculator = (number1, number2, operator) => {
   switch (operator) {
     case "+":
-      console.log(`${number1} + ${number2} = ${number1 + number2}`);
-      break;
+      return number1 + number2;
     case "-":
-      console.log(`${number1} - ${number2} = ${number1 - number2}`);
-      break;
+      return number1 - number2;
     case "*":
-      console.log(`${number1} x ${number2} = ${number1 * number2}`);
-      break;
+      return number1 * number2;
     case "/":
-      console.log(`${number1} : ${number2} = ${number1 / number2}`);
-      break;
+      return number1 / number2;
     default:
-      console.log("Phép tính không hợp lệ ");
+      return "Phép tính không hợp lệ ";
   }
 };
-calculator(2, 4, "+");
+//3 tham số trong 3 không phải biến , muốn in ra phải khai báo biến /
+/**const number1 = 6;
+const number2 = 4;
+const operator = "+";
+console.log(
+  `Phép tính ${number1} ${operator} ${number2} = ${calculator(number1, number2, operator)}`,
+);*/
+console.log(`Phép tính = ${calculator(6, 4, "/")}`);
