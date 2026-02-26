@@ -17,14 +17,18 @@
 //if (price < 100) {
 //  price = 100;
 
-let numOfOder = 5;
+const numOfOder = 5;
 let total = 0;
-for (i = 1; i <= numOfOder; i++) {
+for (let i = 1; i <= numOfOder; i++) {
   let price = Math.ceil(Math.random() * 5000000);
-  if (price < 100) {
-    price = 100;
+  if (price < 100000) {
+    price = 100000;
   }
   total += price;
-  console.log(price);
+  console.log(
+    `Tổng tiền sau đơn hàng thứ ${i} là : ${total.toLocaleString()} VNĐ `,
+  );
 }
-console.log(total);
+console.log(
+  `Tổng tiền ${numOfOder} các đơn hàng là: ${total.toLocaleString()} VNĐ `,
+);
