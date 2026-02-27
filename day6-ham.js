@@ -87,3 +87,43 @@ console.log(
   `Phép tính ${number1} ${operator} ${number2} = ${calculator(number1, number2, operator)}`,
 );*/
 console.log(`Phép tính = ${calculator(6, 4, "/")}`);
+
+//BÀI TẬP VỀ NHÀ
+/**
+ * 1. Viết một hàm findDayOfWeek
+ * 2. Hàm này sẽ nhận 3 tham số: day, month, year
+ * 3. Trả về thứ trong tuần: Thứ 2, Thứ3, Thứ 4,.... Chủ nhật
+ * Gợi ý: const d = new Day(day, month - 1,year )--> d.getDay(); (0-->6): (Thứ 2--> Chủ nhật)
+ */
+
+// Tạo hàm findDayOfWeek + 3 tham số
+const findDayOfWeek = (day, month, year) => {
+  const d = new Date(day, month - 1, year);
+
+  //Tạo biến dayOfWeek để lưu d.getDay()
+  const dayOfWeek = d.getDay();
+  console.log(dayOfWeek); // xem dayOfWeek - xác đinh thứ mấy
+
+  //Câu lệnh switch - case (return - trả dữ liệu và kết thúc )
+  switch (dayOfWeek) {
+    case 0:
+      return "Hôm nay là Thứ 2";
+    case 1:
+      return "Hôm nay là Thứ 3";
+    case 2:
+      return "Hôm nay là Thứ 4";
+    case 3:
+      return "Hôm nay là Thứ 5";
+    case 4:
+      return "Hôm nay là Thứ 6";
+    case 5:
+      return "Hôm nay là Thứ 7";
+    case 6:
+      return "Hôm nay là Chủ nhật";
+    default:
+      return "Thứ không hợp lệ";
+  }
+};
+console.log(findDayOfWeek(28, 2, 2026));
+
+//
