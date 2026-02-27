@@ -125,5 +125,4 @@ const findDayOfWeek = (day, month, year) => {
   }
 };
 console.log(findDayOfWeek(28, 2, 2026));
-
-//
+//Nhập ngày 31/2/2026 trả kq sai ...........
