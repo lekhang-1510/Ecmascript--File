@@ -126,3 +126,39 @@ const findDayOfWeek = (day, month, year) => {
 };
 console.log(findDayOfWeek(28, 2, 2026));
 //Nhập ngày 31/2/2026 trả kq sai ...........
+
+//BÀI TẬP VỀ NHÀ NOTE 1:
+
+//Tạo hàm findDayOfWeek2 với 3 tham số: year2, month2, day2 (ngày, tháng, năm)
+const findDayOfWeek2 = (year2, month2, day2) => {
+  //Dùng new Date() & getDay() để lấy thứ trong tuần
+  const d2 = new Date(year2, month2 - 1, day2);
+  const dayOfWeek2 = d2.getDay();
+
+  //Nếu tháng <1 || tháng>12 -- tháng không hợp lệ
+  if (month2 < 1 || month2 > 12) {
+    return "Tháng không hợp lệ";
+  }
+
+  //Sử dụng switch - case (return trả dữ liệu + kết thúc)
+  switch (dayOfWeek2) {
+    case 0:
+      return "Hôm nay là Chủ nhật ";
+    case 1:
+      return "Hôm nay là Thứ 2 ";
+    case 2:
+      return "Hôm nay là Thứ 3 ";
+    case 3:
+      return "Hôm nay là Thứ 4 ";
+    case 4:
+      return "Hôm nay là Thứ 5 ";
+    case 5:
+      return "Hôm nay là Thứ 6 ";
+    case 6:
+      return "Hôm nay là Thứ 7 ";
+    default:
+      return "Thứ không hợp lệ ";
+  }
+};
+console.log(findDayOfWeek2(2026, 2, 28));
+// Nhập 31/2 trả kq không đúng .......
