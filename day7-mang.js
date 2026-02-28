@@ -55,9 +55,9 @@ nameRelative.push("Khang");
 console.log(`Số người bạn thân là: ${nameRelative.length}`);
 console.log(`Tên người bạn đầu là: ${nameRelative[0]}`);
 
-nameRelative.unshift('Đào');
+nameRelative.unshift("Đào");
 nameRelative.pop();
-nameRelative.splice(2,0,"Khang");
- for (let i=0, i < nameRelative.length,i++){
-    console.log(`Bạn của tôi : ${nameRelative[i]}`);
- }
+nameRelative.splice(2, 0, "Khang");
+for (let i = 0; i < nameRelative.length; i++) {
+  console.log(`Bạn của tôi : ${nameRelative[i]}`);
+}
