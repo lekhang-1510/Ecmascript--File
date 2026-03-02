@@ -17,7 +17,7 @@ const countValidCases = (memoryUsages, limit) => {
   for (let i = 0; i < memoryUsages.length; i++) {
     if (memoryUsages[i] <= limit) {
       count++;
-      validCases.push(memoryUsages[i] + "MB");
+      validCases.push(memoryUsages[i] + "MB" + " ");
     }
   }
   console.log(
