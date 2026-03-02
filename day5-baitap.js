@@ -30,5 +30,5 @@ for (let i = 1; i <= numOfOder; i++) {
   );
 }
 console.log(
-  `Tổng tiền ${numOfOder} các đơn hàng là: ${total.toLocaleString()} VNĐ `,
+  `Tổng tiền ${numOfOder} đơn hàng là: ${total.toLocaleString()} VNĐ `,
 );
