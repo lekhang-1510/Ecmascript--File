@@ -29,10 +29,19 @@ console.log(isAllOddNumber);
  *     - Kiểm tra xem lớp đó, có bạn nào dưới trung bình hay không (<5)
  *     - Kiểm tra xem lớp đó, toàn bộ lớp có qua môn hay không (>=5)
  */
-const scores = [7, 4, 7.5, 8, 6.5, 4.5, 6, 9, 6.5, 8.5];
-const failScores = scores.some((score) => score < 5);
-console.log(
-  failScores ? "Có bạn dưới trung bình" : "Không có bạn nào dưới trung bình",
+// const failScores = scores.some((score) => score < 5);
+// console.log(
+//   failScores ? "Có bạn dưới trung bình" : "Không có bạn nào dưới trung bình",
+// );
+// const highScores = scores.every((score) => score >= 5);
+// console.log(highScores ? "Toàn bộ lớp qua môn" : "Qua môn không hết lớp");
+
+/**
+ * 1. Tạo 1 mảng chưa điểm môn Toán của cả lớp
+ * 2. Viết chương trình công thêm 1đ cho các bạn trong lớp (nếu bạn nào 10 điểm thì không cộng nữa)
+ */
+const mathScores = [7, 4, 7.5, 10, 6.5, 4.5, 6, 8, 6.5, 8.5];
+const updateScores = mathScores.map((updateScore) =>
+  updateScore === 10 ? 10 : updateScore + 1,
 );
-const highScores = scores.every((score) => score >= 5);
-console.log(highScores ? "Toàn bộ lớp qua môn" : "Qua môn không hết lớp");
+console.log(updateScores);
