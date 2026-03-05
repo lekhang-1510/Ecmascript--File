@@ -189,7 +189,6 @@ const employees = [
 ];
 
 //Câu 1: Lọc ra những nhân viên nào không có số điện thoại
-
 const noPhone = employees.filter((employee) => {
   return employee.phoneNumber === null;
 });
@@ -200,6 +199,7 @@ const noEmail = employees.filter((employee) => {
   return employee.email === null;
 });
 console.log("Những nhân viên nào không có email: ", noEmail);
+
 //Bài 3. Lọc ra những nhân viên không có cả sdt và email
 const noPhoneAndEmail = employees.filter((employee) => {
   return employee.phoneNumber === null && employee.email === null;
