@@ -230,4 +230,6 @@ const updatedEmail = employees.map((employee) => ({
 const totalSalary = employees.reduce((total, employee) => {
   return total + employee.salary;
 }, 0);
-console.log(`Tổng lương công ty phải trả 1 tháng: ${totalSalary}`);
+console.log(
+  `Tổng lương công ty phải trả 1 tháng: ${totalSalary.toLocaleString()} VNĐ`,
+);
