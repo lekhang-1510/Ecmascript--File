@@ -190,18 +190,44 @@ const employees = [
 
 //Câu 1: Lọc ra những nhân viên nào không có số điện thoại
 const noPhone = employees.filter((employee) => {
-  return employee.phoneNumber === null;
+  const { phoneNumber } = employee; //destructuring (const{ key} = value)
+  return !phoneNumber;
 });
 console.log("Những nhân viên không có số điện thoại: ", noPhone);
 
 // Câu 2. Lọc ra những nhân viên nào không có email
 const noEmail = employees.filter((employee) => {
-  return employee.email === null;
+  const { email } = employee;
+  return !email; //destructuring (const{ key} = value)
 });
 console.log("Những nhân viên nào không có email: ", noEmail);
 
 //Bài 3. Lọc ra những nhân viên không có cả sdt và email
 const noPhoneAndEmail = employees.filter((employee) => {
-  return employee.phoneNumber === null && employee.email === null;
+  const { email, phoneNumber } = employee; //destructuring (const{ key} = value)
+  return !phoneNumber && !email;
 });
 console.log("Những nhân viên không có cả sdt và email", noPhoneAndEmail);
+
+//Bài 4. Biến đổi giá trị email của những nhân viên không có email thành: id_position@gmail.com
+const updatedEmail = employees.map((employee) => {
+  if (!employee.email) {
+    employee.email = `${employee.id}_${employee.position}@gmail.com`;
+  }
+  return employee;
+});
+console.log(updatedEmail);
+
+//NOTE 2
+/**
+const updatedEmail = employees.map((employee) => ({
+  ...employee,
+  email: employee.email || `${employee.id}_${employee.position}@gmail.com`,
+}));
+*/
+
+// Bài 5. Tính số tiền lương công ty phải trả trong 1 tháng
+const totalSalary = employees.reduce((total, employee) => {
+  return total + employee.salary;
+}, 0);
+console.log(`Tổng lương công ty phải trả 1 tháng: ${totalSalary}`);
