@@ -52,10 +52,14 @@ const employees = [
 // );
 // console.log(employeesWithoutPhoneAndEmail);
 
+//Destructuring
 const employeesWithPhoneAndEmail = employees.filter((employee) => {
   const { email, phoneNumber } = employee;
 
   return email || phoneNumber;
 });
 
-console.log(employeesWithPhoneAndEmail);
+console.log(
+  "\nDanh sách nhân viên có thông tin liên lạc: ",
+  employeesWithPhoneAndEmail,
+);
