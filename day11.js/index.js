@@ -72,7 +72,7 @@ console.log(
          -> Email mới sẽ là: 2_tester@company.com. Cập nhật email này vào record của nhân viên đó.
  */
 const updateEmail = employees.map((employee) => {
-  if (!employee.email) {
+  if (employee.email) {
     employee.email = `${employee.id}_${employee.position}@gmail.com`;
   }
   return employee;
